@@ -11,6 +11,7 @@
 .DHR__NavBar-Logo {
   max-width: 6rem;
   max-height: 6rem;
+  animation: SPIN 4s;
 }
 
 .DHR__NavBar-Bars {
@@ -28,6 +29,7 @@
   height: 7px;
   background-color: var(--white);
   transition: 0.3s ease-in-out;
+  animation: HundredPercentFull 4s;
 }
 
 .DHR__NavBar-Bars_Middle {
@@ -35,6 +37,7 @@
   height: 7px;
   background-color: var(--white);
   transition: 0.5s ease-in-out;
+  animation: SixtyFivePercentFull 5s;
 }
 
 .DHR__NavBar-Bars_Bottom {
@@ -42,10 +45,38 @@
   height: 7px;
   background-color: var(--white);
   transition: 0.7s ease-in-out;
+  animation: HundredPercentFull 4s;
 }
 
 .DHR__NavBar-Bars:hover > .DHR__NavBar-Bars_Top,
 .DHR__NavBar-Bars:hover > .DHR__NavBar-Bars_Middle,
 .DHR__NavBar-Bars:hover > .DHR__NavBar-Bars_Bottom {
   background-color: var(--yellow);
+}
+
+@keyframes SPIN {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes HundredPercentFull {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes SixtyFivePercentFull {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
 }

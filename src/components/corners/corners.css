@@ -9,22 +9,26 @@
   left: 11.9%;
   top: -12%;
   transform: rotate(90deg);
+  animation: TOP_LEFT_TOP 3s;
 }
 
 .DHR__Corners-TOP_LEFT_SIDE {
   top: 6%;
   left: 3%;
+  animation: TOP_LEFT_SIDE 3s;
 }
 
 .DHR__Corners-BOTTOM_RIGHT_BOTTOM {
   right: 11.9%;
   bottom: -12%;
   transform: rotate(90deg);
+  animation: BOTTOM_RIGHT_BOTTOM 3s;
 }
 
 .DHR__Corners-BOTTOM_RIGHT_SIDE {
   bottom: 6%;
   right: 3%;
+  animation: BOTTOM_RIGHT_SIDE 3s;
 }
 
 .DHR__Corners-Div_Time {
@@ -54,4 +58,48 @@
   height: 3px;
   margin-left: 1rem;
   background-color: var(--white);
+}
+
+@keyframes TOP_LEFT_TOP {
+  from {
+    top: 0%;
+    left: 0%;
+  }
+  to {
+    left: 11.9%;
+    top: -12%;
+  }
+}
+
+@keyframes TOP_LEFT_SIDE {
+  from {
+    top: 0%;
+    left: 0%;
+  }
+  to {
+    top: 6%;
+    left: 3%;
+  }
+}
+
+@keyframes BOTTOM_RIGHT_BOTTOM {
+  from {
+    bottom: 0%;
+    right: 0%;
+  }
+  to {
+    right: 11.9%;
+    bottom: -12%;
+  }
+}
+
+@keyframes BOTTOM_RIGHT_SIDE {
+  from {
+    bottom: 0%;
+    right: 0%;
+  }
+  to {
+    bottom: 6%;
+    right: 3%;
+  }
 }

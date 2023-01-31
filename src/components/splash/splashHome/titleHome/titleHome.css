@@ -12,5 +12,7 @@
 }
 
 .DHR__TitleHome-Title h1 > span {
+  font-size: 5rem;
   color: var(--yellow);
+  font-family: "Lobster", cursive;
 }

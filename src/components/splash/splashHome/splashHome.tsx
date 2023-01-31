@@ -8,8 +8,10 @@ import TitleHome from "./titleHome/titleHome";
 export default function SplashHome() {
   return (
     <>
-      <Corners />
+      <div className="DHR__SplashHome"></div>
+
       <header>
+        <Corners />
         <NavBar />
         <TitleHome />
       </header>
