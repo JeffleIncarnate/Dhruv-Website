@@ -1,0 +1,57 @@
+.DHR__Corners-Div {
+  position: absolute;
+  width: 1.8rem;
+  height: 24rem;
+  background-color: var(--white);
+}
+
+.DHR__Corners-TOP_LEFT_TOP {
+  left: 11.9%;
+  top: -12%;
+  transform: rotate(90deg);
+}
+
+.DHR__Corners-TOP_LEFT_SIDE {
+  top: 6%;
+  left: 3%;
+}
+
+.DHR__Corners-BOTTOM_RIGHT_BOTTOM {
+  right: 11.9%;
+  bottom: -12%;
+  transform: rotate(90deg);
+}
+
+.DHR__Corners-BOTTOM_RIGHT_SIDE {
+  bottom: 6%;
+  right: 3%;
+}
+
+.DHR__Corners-Div_Time {
+  position: absolute;
+  bottom: 25%;
+  left: -5.3%;
+  transform: rotate(-90deg);
+}
+
+.DHR__Corners-Div_Time h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DHR__Corners-Div_Time h2::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  margin-right: 1rem;
+  background-color: var(--white);
+}
+
+.DHR__Corners-Div_Time h2::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  margin-left: 1rem;
+  background-color: var(--white);
+}
