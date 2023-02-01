@@ -8,6 +8,12 @@ import Logo from "../../assets/Logo_Light.png";
 export default function NavBar() {
   const [isNavShown, setIsNavShown] = useState(false);
 
+  let bar1 = document.getElementById("DHR__NavBar-Bars_Top");
+  let bar2 = document.getElementById("DHR__NavBar-Bars_Middle");
+  let bar3 = document.getElementById("DHR__NavBar-Bars_Bottom");
+
+  let entireNav = document.getElementById("DHR__NavBar-OnClick");
+
   return (
     <>
       <nav className="DHR__NavBar">
@@ -15,15 +21,29 @@ export default function NavBar() {
           <img className="DHR__NavBar-Logo" src={Logo} alt="Dhruv Rayat Logo" />
         </Link>
 
+        <div className="DHR__NavBar-Social_Links">
+          <ul>
+            <li>
+              <a href="https://github.com/Dhruv-Rayat1" target="_blank">
+                <i className="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/dhruv_rayat/" target="_blank">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/RayatDhruv" target="_blank">
+                <i className="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div
           className="DHR__NavBar-Bars"
           onClick={() => {
-            let bar1 = document.getElementById("DHR__NavBar-Bars_Top");
-            let bar2 = document.getElementById("DHR__NavBar-Bars_Middle");
-            let bar3 = document.getElementById("DHR__NavBar-Bars_Bottom");
-
-            let entireNav = document.getElementById("DHR__NavBar-OnClick");
-
             if (isNavShown) {
               entireNav!.style.width = "0vw";
               // Bar 1

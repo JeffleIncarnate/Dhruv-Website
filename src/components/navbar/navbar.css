@@ -30,39 +30,6 @@
   z-index: 2;
 }
 
-#DHR__NavBar-Bars_Top {
-  width: 100%;
-  height: 7px;
-  background-color: var(--white);
-  transition: 0.3s ease-in-out;
-  animation: HundredPercentFull 4s;
-  position: relative;
-}
-
-#DHR__NavBar-Bars_Middle {
-  width: 65%;
-  height: 7px;
-  background-color: var(--white);
-  transition: 0.3s ease-in-out;
-  animation: SixtyFivePercentFull 5s;
-  position: relative;
-}
-
-#DHR__NavBar-Bars_Bottom {
-  width: 100%;
-  height: 7px;
-  background-color: var(--white);
-  transition: 0.3s ease-in-out;
-  animation: HundredPercentFull 4s;
-  position: relative;
-}
-
-.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Top,
-.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Middle,
-.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Bottom {
-  background-color: var(--yellow);
-}
-
 @keyframes SPIN {
   from {
     transform: rotate(360deg);
@@ -90,7 +57,65 @@
   }
 }
 
+/* -- Social Links --*/
+.DHR__NavBar-Social_Links > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DHR__NavBar-Social_Links > ul > li {
+  list-style-type: none;
+}
+
+.DHR__NavBar-Social_Links > ul > li > a {
+  margin: 1rem;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease 0s;
+  color: var(--white);
+}
+
+.DHR__NavBar-Social_Links > ul > li > a:hover {
+  color: var(--yellow);
+}
+
 /* -- OnClick Navbar -- */
+#DHR__NavBar-Bars_Top {
+  width: 100%;
+  height: 7px;
+  background-color: var(--white);
+  transition: 0.3s ease-in-out;
+  animation: HundredPercentFull 4s;
+  position: relative;
+  top: 0rem;
+}
+
+#DHR__NavBar-Bars_Middle {
+  width: 65%;
+  height: 7px;
+  background-color: var(--white);
+  transition: 0.3s ease-in-out;
+  animation: SixtyFivePercentFull 5s;
+  position: relative;
+}
+
+#DHR__NavBar-Bars_Bottom {
+  width: 100%;
+  height: 7px;
+  background-color: var(--white);
+  transition: 0.3s ease-in-out;
+  animation: HundredPercentFull 4s;
+  position: relative;
+  bottom: 0rem;
+}
+
+.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Top,
+.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Middle,
+.DHR__NavBar-Bars:hover > #DHR__NavBar-Bars_Bottom {
+  background-color: var(--yellow);
+}
+
 #DHR__NavBar-OnClick {
   width: 0vw;
   height: 100vh;
