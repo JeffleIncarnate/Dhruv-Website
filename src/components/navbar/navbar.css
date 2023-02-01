@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  z-index: 2;
 }
 
 .DHR__NavBar-Logo {
@@ -28,6 +27,7 @@
   justify-content: space-between;
   flex-direction: column;
   cursor: pointer;
+  z-index: 2;
 }
 
 #DHR__NavBar-Bars_Top {

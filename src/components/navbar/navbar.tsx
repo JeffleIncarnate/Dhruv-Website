@@ -11,9 +11,9 @@ export default function NavBar() {
   return (
     <>
       <nav className="DHR__NavBar">
-        <a href="/">
+        <Link to="/">
           <img className="DHR__NavBar-Logo" src={Logo} alt="Dhruv Rayat Logo" />
-        </a>
+        </Link>
 
         <div
           className="DHR__NavBar-Bars"
