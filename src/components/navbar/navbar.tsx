@@ -8,12 +8,6 @@ import Logo from "../../assets/Logo_Light.png";
 export default function NavBar() {
   const [isNavShown, setIsNavShown] = useState(false);
 
-  let bar1 = document.getElementById("DHR__NavBar-Bars_Top");
-  let bar2 = document.getElementById("DHR__NavBar-Bars_Middle");
-  let bar3 = document.getElementById("DHR__NavBar-Bars_Bottom");
-
-  let entireNav = document.getElementById("DHR__NavBar-OnClick");
-
   return (
     <>
       <nav className="DHR__NavBar">
@@ -44,6 +38,12 @@ export default function NavBar() {
         <div
           className="DHR__NavBar-Bars"
           onClick={() => {
+            let bar1 = document.getElementById("DHR__NavBar-Bars_Top");
+            let bar2 = document.getElementById("DHR__NavBar-Bars_Middle");
+            let bar3 = document.getElementById("DHR__NavBar-Bars_Bottom");
+
+            let entireNav = document.getElementById("DHR__NavBar-OnClick");
+
             if (isNavShown) {
               entireNav!.style.width = "0vw";
               // Bar 1
