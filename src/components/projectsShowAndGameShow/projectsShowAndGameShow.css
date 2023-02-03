@@ -1,0 +1,91 @@
+/* -- LEFT -- */
+.projects_left {
+  width: 40%;
+  margin: 7rem auto 5rem 20%;
+  aspect-ratio: 16/9;
+  min-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-align: right;
+}
+
+.projects_left:hover {
+  transform: translate(-10px, -10px);
+}
+
+.projects_left > h2 {
+  position: relative;
+  top: -50%;
+  left: -50%;
+  transform: translateY(30%);
+  font-size: 7rem;
+}
+
+.projects_left > p {
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 219, 88, 0.5);
+  position: relative;
+  right: -50%;
+  transform: translateX(-50%);
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 100px;
+  max-width: 300px;
+}
+
+/* -- RIGHT -- */
+.projects_right {
+  width: 40%;
+  margin: 7rem 20% 5rem auto;
+  aspect-ratio: 16/9;
+  min-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-align: left;
+}
+
+.projects_right:hover {
+  transform: translate(10px, -10px);
+}
+
+.projects_right > h2 {
+  position: relative;
+  top: -50%;
+  right: -50%;
+  transform: translateY(50%);
+  font-size: 7rem;
+}
+
+.projects_right > p {
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 219, 88, 0.5);
+  position: relative;
+  left: -50%;
+  transform: translateX(50%);
+  border-radius: 0 1rem 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100px;
+  max-width: 300px;
+}
