@@ -6,13 +6,15 @@
   text-align: center;
 }
 
-.DHR__TitleHome-Title h1 {
-  font-size: 4rem;
-  margin: 1rem;
-}
-
 .DHR__TitleHome-Title h1 > span {
   font-size: 5rem;
   color: var(--yellow);
   font-family: "Lobster", cursive;
+}
+
+.Typewriter__wrapper {
+  font-size: 5rem;
+  color: var(--yellow);
+  font-family: "Lobster", cursive;
+  display: inline-block;
 }
