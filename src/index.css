@@ -20,3 +20,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+hr {
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
