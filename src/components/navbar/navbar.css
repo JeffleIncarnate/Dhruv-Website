@@ -96,7 +96,7 @@
   height: 7px;
   background-color: var(--white);
   transition: 0.3s ease-in-out;
-  animation: SixtyFivePercentFull 5s;
+  animation: SixtyFivePercentFull 3s;
   position: relative;
 }
 
@@ -154,6 +154,7 @@
 }
 
 #DHR__NavBar-OnClick > ul > li a::after {
+  margin-left: 1rem;
   content: "/>";
   transition: margin-left 0.3s ease 0s;
 }
@@ -163,7 +164,7 @@
 }
 
 #DHR__NavBar-OnClick > ul > li a:hover::after {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 #DHR__NavBar-OnClick > ul > li a:hover {
