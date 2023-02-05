@@ -1,5 +1,7 @@
 import NavBar from "../components/navbar/navbar";
 import SplashOthers from "../components/splash/splashOthers/splashOthers";
+import Corners from "../components/corners/corners";
+
 import { useEffect } from "react";
 
 export default function AboutPage() {
@@ -9,6 +11,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <Corners />
       <NavBar />
       <SplashOthers h1="About Me" />
     </>

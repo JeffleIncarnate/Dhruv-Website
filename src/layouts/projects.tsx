@@ -1,6 +1,7 @@
 import NavBar from "../components/navbar/navbar";
 import SplashOthers from "../components/splash/splashOthers/splashOthers";
 import ProjectsMain from "../components/projectsMain/projectsmain";
+import Corners from "../components/corners/corners";
 
 import { useEffect } from "react";
 
@@ -11,6 +12,7 @@ export default function ProjectsPage() {
 
   return (
     <>
+      <Corners />
       <NavBar />
       <SplashOthers h1="Projects" p="Some of my best projects" />
       <ProjectsMain />

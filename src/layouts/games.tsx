@@ -1,5 +1,7 @@
 import NavBar from "../components/navbar/navbar";
 import SplashOthers from "../components/splash/splashOthers/splashOthers";
+import Corners from "../components/corners/corners";
+
 import { useEffect } from "react";
 
 export default function GamesPage() {
@@ -8,6 +10,7 @@ export default function GamesPage() {
   }, []);
   return (
     <>
+      <Corners />
       <NavBar />
       <SplashOthers h1="Games" />
     </>
