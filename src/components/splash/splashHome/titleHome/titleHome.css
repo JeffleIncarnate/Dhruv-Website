@@ -16,5 +16,11 @@
   font-size: 5rem;
   color: var(--yellow);
   font-family: "Lobster", cursive;
-  display: inline-block;
+}
+
+.Typewriter__cursor {
+  font-size: 5rem;
+  color: var(--yellow);
+  position: relative;
+  bottom: 0.5rem;
 }

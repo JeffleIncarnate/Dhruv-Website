@@ -15,6 +15,7 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   text-align: right;
+  border: 0.5rem solid var(--white);
 }
 
 .projects_left:hover {
@@ -27,12 +28,13 @@
   left: -50%;
   transform: translateY(30%);
   font-size: 7rem;
+  color: var(--yellow);
 }
 
 .projects_left > p {
   font-size: 1.3rem;
   padding: 1rem 2rem;
-  background-color: rgba(255, 219, 88, 0.5);
+  background-color: rgba(28, 52, 77, 0.5);
   position: relative;
   right: -50%;
   transform: translateX(-50%);
@@ -43,6 +45,8 @@
   min-height: 100px;
   max-width: 300px;
 }
+
+/* Corners */
 
 /* -- RIGHT -- */
 .projects_right {
@@ -61,6 +65,7 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   text-align: left;
+  border: 0.5rem solid var(--white);
 }
 
 .projects_right:hover {
@@ -73,12 +78,13 @@
   right: -50%;
   transform: translateY(50%);
   font-size: 7rem;
+  color: var(--yellow);
 }
 
 .projects_right > p {
   font-size: 1.3rem;
   padding: 1rem 2rem;
-  background-color: rgba(255, 219, 88, 0.5);
+  background-color: rgba(28, 52, 77, 0.5);
   position: relative;
   left: -50%;
   transform: translateX(50%);

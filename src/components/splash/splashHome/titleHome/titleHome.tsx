@@ -8,7 +8,7 @@ export default function TitleHome() {
     <div className="DHR__TitleHome-Title">
       <Typewriter
         onInit={(typewriter) => {
-          typewriter.typeString("Hiya, I'm Dhruv™️!").start();
+          typewriter.typeString("<!-- Hiya, I'm Dhruv™️! -->").start();
         }}
       />
       <p>I don't make websites, I make web experiences</p>
