@@ -39,15 +39,14 @@ export default function Footer() {
         >
           About
         </Link>
-        <button
-          type="button"
+        <Link
           onClick={() => {
-            navigate("/contact");
             window.scrollBy(0, -100000);
           }}
+          to="/contact"
         >
           Contact
-        </button>
+        </Link>
       </div>
       <div className="DHR__Footer-Socials">
         <a

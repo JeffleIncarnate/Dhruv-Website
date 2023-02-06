@@ -1,18 +1,40 @@
 footer {
-  background-color: var(--black-2);
   margin-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: var(--white);
-  border: 0.5rem solid var(--white);
+  border-top: 0.5rem solid var(--white);
 }
 
 footer > h3 {
   font-size: 3rem;
   margin-top: 3rem;
   cursor: pointer;
+  transition: color 0.3s ease 0s;
+}
+
+footer > h3::before {
+  content: "<!--";
+  transition: margin-right 0.3s ease 0s;
+}
+
+footer > h3::after {
+  content: "-->";
+  transition: margin-left 0.3s ease 0s;
+}
+
+footer > h3:hover {
+  color: var(--yellow);
+}
+
+footer > h3:hover::before {
+  margin-right: 1rem;
+}
+
+footer > h3:hover::after {
+  margin-left: 1rem;
 }
 
 .footer_links a {
@@ -21,27 +43,19 @@ footer > h3 {
   color: var(--white);
   text-decoration: none;
   display: inline-block;
-  transition: color 0.4s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .footer_links a:hover {
-  color: var(--accent);
+  color: var(--yellow);
 }
 
-.footer_links button {
-  font-size: 1.5rem;
-  margin: 1rem;
-  border: solid 2px var(--accent);
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  color: var(--white);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+.footer_links a::before {
+  content: "<";
 }
 
-.footer_links button:hover {
-  background-color: var(--accent);
+.footer_links a::after {
+  content: " />";
 }
 
 .DHR__Footer-Socials {
@@ -60,7 +74,7 @@ footer > h3 {
 }
 
 .DHR__Footer-Socials a:hover {
-  color: var(--accent);
+  color: var(--yellow);
 }
 
 /* -- Responsive -- */
