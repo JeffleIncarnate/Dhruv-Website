@@ -8,14 +8,14 @@
   padding: 0;
 }
 
-.DHR__NavBar-Logo {
+#DHR__NavBar-Logo {
   max-width: 6rem;
   max-height: 6rem;
   animation: SPIN 4s;
   transition: transform 2s ease-in-out;
 }
 
-.DHR__NavBar-Logo:hover {
+#DHR__NavBar-Logo:hover {
   transform: rotate(360deg);
 }
 

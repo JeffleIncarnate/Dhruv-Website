@@ -3,16 +3,25 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 // Image
-import Logo from "../../assets/Logo_Light.png";
+import LogoLight from "../../assets/Logo_Light.png";
+import LogoDark from "../../assets/Logo_Dark.png";
+
+// Components
+import Theme from "../theme/theme";
 
 export default function NavBar() {
   const [isNavShown, setIsNavShown] = useState(false);
 
   return (
     <>
+      <Theme />
       <nav className="DHR__NavBar">
         <Link to="/">
-          <img className="DHR__NavBar-Logo" src={Logo} alt="Dhruv Rayat Logo" />
+          {localStorage.getItem("theme") == "dark" ? (
+            <img id="DHR__NavBar-Logo" src={LogoLight} alt="Dhruv Rayat Logo" />
+          ) : (
+            <img id="DHR__NavBar-Logo" src={LogoDark} alt="Dhruv Rayat Logo" />
+          )}
         </Link>
 
         <div className="DHR__NavBar-Social_Links">
