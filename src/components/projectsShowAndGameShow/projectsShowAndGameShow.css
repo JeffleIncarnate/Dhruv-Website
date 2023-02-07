@@ -16,6 +16,7 @@
   cursor: pointer;
   text-align: right;
   border: 0.5rem solid var(--white);
+  color: white;
 }
 
 .projects_left:hover {
@@ -66,6 +67,7 @@
   cursor: pointer;
   text-align: left;
   border: 0.5rem solid var(--white);
+  color: white;
 }
 
 .projects_right:hover {
