@@ -18,14 +18,16 @@ export default function Theme(props: any) {
             window.dispatchEvent(new Event("storage"));
             localStorage.setItem("theme", "light");
             document.documentElement.style.setProperty("--white", "#1c344d");
-            document.documentElement.style.setProperty("--blue", "#FAF9F6");
+            document.documentElement.style.setProperty("--blue", "#FFF");
+            document.documentElement.style.setProperty("--blue-2", "#faf9f6");
             const img: HTMLImageElement | any =
               document.getElementById("DHR__NavBar-Logo")!;
             img.src = LogoDark;
           } else {
             window.dispatchEvent(new Event("storage"));
-            document.documentElement.style.setProperty("--white", "#FAF9F6");
+            document.documentElement.style.setProperty("--white", "#FFF");
             document.documentElement.style.setProperty("--blue", "#1c344d");
+            document.documentElement.style.setProperty("--blue-2", "#2a4d72");
             localStorage.setItem("theme", "dark");
             const img: HTMLImageElement | any =
               document.getElementById("DHR__NavBar-Logo")!;
