@@ -1,0 +1,47 @@
+.DHR__About {
+  margin: 5rem 0;
+  width: 100%;
+  color: var(--white);
+}
+
+.DHR__About-Me {
+  width: 70%;
+  margin: 0 0 5rem 15%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.DHR__About-Me > h2 {
+  font-size: 3rem;
+}
+
+.DHR__About-Me > p {
+  font-size: 1.3rem;
+}
+
+.DHR__About-Experiences {
+  width: 70%;
+  margin: 10rem 0 0 15%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.DHR__About-Experiences > h2 {
+  font-size: 3rem;
+}
+
+.DHR__About-Experiences > h3 {
+  margin: 2rem 0 0.5rem 0;
+}
+
+.DHR__About-Experiences ul > li {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
