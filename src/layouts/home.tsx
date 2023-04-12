@@ -10,7 +10,9 @@ export default function HomePage() {
 
   return (
     <>
-      <SplashHome />
+      <AnimatedPage>
+        <SplashHome />
+      </AnimatedPage>
     </>
   );
 }
