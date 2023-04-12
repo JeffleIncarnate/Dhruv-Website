@@ -3,6 +3,7 @@ import SplashOthers from "../components/splash/splashOthers/splashOthers";
 import Corners from "../components/corners/corners";
 import GamesMain from "../components/gamesMain/gamesmain";
 import Footer from "../components/footer/footer";
+import AnimatedPage from "../components/transition/transition";
 
 import { useEffect } from "react";
 
@@ -12,11 +13,13 @@ export default function GamesPage() {
   }, []);
   return (
     <>
-      <Corners />
-      <NavBar />
-      <SplashOthers h1="Games" />
-      <GamesMain />
-      <Footer />
+      <AnimatedPage>
+        <Corners />
+        <NavBar />
+        <SplashOthers h1="Games" />
+        <GamesMain />
+        <Footer />
+      </AnimatedPage>
     </>
   );
 }

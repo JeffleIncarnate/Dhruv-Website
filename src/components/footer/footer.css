@@ -15,26 +15,8 @@ footer > h3 {
   transition: color 0.3s ease 0s;
 }
 
-footer > h3::before {
-  content: "<!--";
-  transition: margin-right 0.3s ease 0s;
-}
-
-footer > h3::after {
-  content: "-->";
-  transition: margin-left 0.3s ease 0s;
-}
-
 footer > h3:hover {
   color: var(--yellow);
-}
-
-footer > h3:hover::before {
-  margin-right: 1rem;
-}
-
-footer > h3:hover::after {
-  margin-left: 1rem;
 }
 
 .footer_links a {
