@@ -1,28 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --blue: #1c344d;
-  --blue-2: #2a4d72;
-  --yellow: #ffdb58;
-  --white: #faf9f6;
+  --black: #0e0c0d;
+  --white: #ede9ec;
+  --maroon: #372f33;
+  --purple: #705c6b;
 }
 
 body {
-  background-color: var(--blue);
+  background: var(--black);
+
   color: var(--white);
-  box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-hr {
-  width: 80%;
-  margin: 0 10% 0 10%;
 }
