@@ -87,10 +87,10 @@ export const Navbar = () => {
               },
             }}
           >
-            <div className="ml-8 space-y-4 font-header text-6xl font-bold">
+            <div className="ml-8 space-y-8 font-header text-6xl font-bold">
               <p>Home</p>
               <p>About</p>
-              <p>Works</p>
+              <p>Selected Works</p>
               <p>Contact</p>
             </div>
           </motion.div>

@@ -2,6 +2,8 @@ import { createLazyFileRoute } from "@tanstack/react-router";
 
 import { Splash } from "../components/splash";
 import { About } from "../components/about";
+import { SelectedWorks } from "../components/selected-works";
+import { Footer } from "../components/footer";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -11,9 +13,13 @@ function Index() {
   return (
     <>
       <Splash />
-      <main className="w-full">
+
+      <main className="flex w-full flex-col gap-40">
         <About />
+        <SelectedWorks />
       </main>
+
+      <Footer />
     </>
   );
 }

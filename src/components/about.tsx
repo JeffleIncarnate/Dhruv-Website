@@ -1,6 +1,8 @@
+import { Dropdown } from "./dropdown";
+
 export const About = () => {
   return (
-    <div className="mx-auto flex w-[90%] items-center justify-center gap-[20%]">
+    <div className="mx-auto flex w-[90%] items-center justify-center gap-[15%]">
       <div className="flex-1 space-y-4">
         <h2 className="font-header text-6xl font-bold">About Dhruv Rayat</h2>
         <p className="font-body">
@@ -12,10 +14,10 @@ export const About = () => {
         </p>
       </div>
 
-      <div className="flex-1 bg-red-300">
-        <div>
-          <h2 className="font-header">STORY</h2>
-        </div>
+      <div className="flex-1">
+        <Dropdown title="seo" dropdownContents="lorem" />
+        <Dropdown title="story" dropdownContents="∫∫∫∫" />
+        <Dropdown title="tech stack" dropdownContents="yes" />
       </div>
     </div>
   );

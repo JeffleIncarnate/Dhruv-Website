@@ -1,3 +1,7 @@
 import Logo from "./logo.png";
 
-export { Logo };
+import DhruvBanking from "./selected-works/dhruv-banking.png";
+import DhruvSocial from "./selected-works/dhruv-social.png";
+import ByteClass from "./selected-works/byte-class.png";
+
+export { Logo, DhruvBanking, DhruvSocial, ByteClass };
