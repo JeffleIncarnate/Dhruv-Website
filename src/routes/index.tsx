@@ -1,11 +1,11 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 import { Splash } from "../components/splash";
 import { About } from "../components/about";
 import { SelectedWorks } from "../components/selected-works";
 import { Footer } from "../components/footer";
 
-export const Route = createLazyFileRoute("/")({
+export const Route = createFileRoute("/")({
   component: Index,
 });
 
