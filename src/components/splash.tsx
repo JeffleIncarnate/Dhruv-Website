@@ -4,7 +4,7 @@ export const Splash = () => {
       <div className="flex w-2/5 flex-col gap-8">
         <div className="h-2 w-full bg-white"></div>
 
-        <div className="font-header w-full text-center text-6xl font-bold">
+        <div className="z-10 w-full text-center font-header text-6xl font-bold">
           <h1 className="uppercase">Hey there, I'm</h1>
           <h1 className="uppercase">Dhruv Rayat</h1>
         </div>

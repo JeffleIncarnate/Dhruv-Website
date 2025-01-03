@@ -64,6 +64,12 @@ export const Project = ({
             </a>
           )}
         </div>
+
+        <div>
+          <button>
+            Learn More <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </button>
+        </div>
       </div>
     </div>
   );

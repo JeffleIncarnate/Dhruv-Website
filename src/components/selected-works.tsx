@@ -90,6 +90,7 @@ const DisplayWorks = (projects: ProjectOmitted[]) => {
             links={project.links}
             tags={project.tags}
             type={idx % 2 == 0 ? "left" : "right"}
+            key={project.projectName}
           />
         );
       })}
