@@ -1,70 +1,7 @@
 import { Project } from "./project";
 
-import { ByteClass, DhruvBanking, DhruvSocial } from "../assets";
-import type { ProjectOmitted } from "../core/types";
-
-const Projects: ProjectOmitted[] = [
-  {
-    projectName: "Dhruv Banking",
-    description:
-      "Dhruv Banking, the future of banking.  This  Full stack web app was a School Level 2 Assessment",
-    imageData: {
-      img: DhruvBanking,
-      alt: "Dhruv Banking",
-    },
-    links: {
-      github: "https://github.com/Dhruv-Banking",
-    },
-    tags: [
-      "react",
-      "docker",
-      "redis",
-      "postgresql",
-      "authentication",
-      "mailing",
-      "css",
-    ],
-  },
-  {
-    projectName: "Dhruv Social",
-    description: "Dhruv’s happening? Join Dhruv Social Today!",
-    imageData: {
-      img: DhruvSocial,
-      alt: "Dhruv Social",
-    },
-    links: {
-      github: "https://github.com/Dhruv-Social",
-    },
-    tags: [
-      "react",
-      "express",
-      "postgresql",
-      "authentication",
-      "mailing",
-      "css",
-    ],
-  },
-  {
-    projectName: "ByteClass",
-    description: "Hate google classroom? Well I've got the solution for you!",
-    imageData: {
-      img: ByteClass,
-      alt: "ByteClass",
-    },
-    links: {
-      github: "https://github.com/Byte-Class",
-    },
-    tags: [
-      "nextjs",
-      "trpc",
-      "postgresql",
-      "redis",
-      "google",
-      "classroom",
-      "typescript",
-    ],
-  },
-];
+import { Projects } from "../core/data/projects";
+import { ProjectOmitted } from "../core/types";
 
 export const SelectedWorks = () => {
   return (
@@ -84,6 +21,10 @@ const DisplayWorks = (projects: ProjectOmitted[]) => {
       {projects.map((project, idx) => {
         return (
           <Project
+            id={project.projectName
+              .split(" ")
+              .map((x) => x.toLowerCase())
+              .join("-")}
             projectName={project.projectName}
             description={project.description}
             imageData={project.imageData}

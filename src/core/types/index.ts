@@ -11,8 +11,9 @@ type Project = {
     link?: string;
   };
   type: "left" | "right";
+  id: string;
 };
 
-type ProjectOmitted = Omit<Project, "type">;
+type ProjectOmitted = Omit<Project, "type" | "id">;
 
 export type { Project, ProjectOmitted };

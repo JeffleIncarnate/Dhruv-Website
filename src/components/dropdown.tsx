@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Dropdown = ({
   title,
@@ -16,6 +17,7 @@ export const Dropdown = ({
     <motion.div
       className="border-b-4 py-2 first:border-t-4"
       animate={descriptionOpen ? "open" : "closed"}
+      initial={false}
     >
       <div
         className="flex items-center justify-between"
@@ -23,7 +25,9 @@ export const Dropdown = ({
           setDescriptionOpen((prev) => !prev);
         }}
       >
-        <h2 className="font-header text-4xl font-bold uppercase">{title}</h2>
+        <h2 className="cursor-pointer select-none font-header text-4xl font-bold uppercase">
+          {title}
+        </h2>
 
         <motion.div
           key={`dropdown_${title}`}
@@ -36,7 +40,7 @@ export const Dropdown = ({
             },
           }}
         >
-          <ChevronDown />
+          <FontAwesomeIcon icon={faChevronDown} />
         </motion.div>
       </div>
 

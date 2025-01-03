@@ -1,20 +1,20 @@
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 const useMousePosition = () => {
   const [prevY, setPrevY] = useState(0);
-
   const [y, setY] = useState(0);
   const [x, setX] = useState(0);
 
+  // UseEffect to determine the position of the lil' div that follows the mouse
   useEffect(() => {
-    const updateMousePosition = (ev) => {
-      setY(ev.clientY + window.scrollY);
-      setX(ev.clientX);
-      setPrevY(ev.clientY);
+    const updateMousePosition = (e: MouseEvent) => {
+      setY(e.clientY + window.scrollY);
+      setX(e.clientX);
+      setPrevY(e.clientY);
     };
 
-    const scrollData = (e) => {
+    const scrollData = () => {
       setY(prevY + window.scrollY);
 
       setPrevY(prevY);
@@ -28,6 +28,18 @@ const useMousePosition = () => {
       window.removeEventListener("scroll", scrollData);
     };
   }, [y, x, prevY]);
+
+  // Special use effect to know if the follow mouse is colliding with a project div.
+  // If it does happen. Then a spicy animation will play!
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      const projectDivs = document.querySelectorAll("#project");
+
+      const firstDiv = projectDivs[0];
+
+      console.log(firstDiv.scrollTop);
+    });
+  }, []);
 
   return { x, y };
 };
