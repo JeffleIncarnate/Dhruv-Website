@@ -2,14 +2,23 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Logo } from "../assets";
+import { useNavigate } from "@tanstack/react-router";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
     <>
-      <nav className="absolute left-8 right-8 top-8 flex w-[calc(100vw-4rem)] justify-between">
-        <div className="aspect-square w-20">
+      <nav className="absolute left-8 right-8 top-8 flex w-[calc(100vw-4rem)] cursor-pointer justify-between">
+        <div
+          className="aspect-square w-20"
+          onClick={() => {
+            navigate({
+              to: "/",
+            });
+          }}
+        >
           <img src={Logo} alt="Dhruv Rayat Logo" className="h-full w-full" />
         </div>
 
