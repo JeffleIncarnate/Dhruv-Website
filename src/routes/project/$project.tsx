@@ -20,10 +20,11 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
   const doesProjectExist =
     Projects.filter((x) => {
       return (
-        x.projectName ===
+        x.projectName.toLowerCase() ===
         project
           .split("-")
           .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+          .map((x) => x.toLowerCase())
           .join(" ")
       );
     }).length !== 0;
