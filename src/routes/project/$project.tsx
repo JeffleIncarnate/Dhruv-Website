@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 import { ProjectHeader } from "../../components/projectHeader";
 
@@ -15,28 +15,20 @@ export const Route = createFileRoute("/project/$project")({
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
   const { project } = Route.useParams();
-  const navigate = useNavigate();
 
-  const doesProjectExist =
-    Projects.filter((x) => {
-      return (
-        x.projectName.toLowerCase() ===
-        project
-          .split("-")
-          .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
-          .map((x) => x.toLowerCase())
-          .join(" ")
-      );
-    }).length !== 0;
-
-  if (!doesProjectExist) {
-    navigate({
-      to: `/`,
-    });
-  }
+  const doesProjectExist = Projects.filter((x) => {
+    return (
+      x.projectName.toLowerCase() ===
+      project
+        .split("-")
+        .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+        .map((x) => x.toLowerCase())
+        .join(" ")
+    );
+  })[0];
 
   return (
-    <ProjectContext.Provider value={project}>
+    <ProjectContext.Provider value={doesProjectExist}>
       {children}
     </ProjectContext.Provider>
   );

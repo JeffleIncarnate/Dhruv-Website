@@ -1,4 +1,4 @@
-type Project = {
+type TProject = {
   projectName: string;
   description: string;
   imageData: {
@@ -14,6 +14,6 @@ type Project = {
   id: string;
 };
 
-type ProjectOmitted = Omit<Project, "type" | "id">;
+type TProjectOmitted = Omit<TProject, "type" | "id">;
 
-export type { Project, ProjectOmitted };
+export type { TProject, TProjectOmitted };
