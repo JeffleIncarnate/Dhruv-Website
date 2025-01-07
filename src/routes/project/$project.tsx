@@ -4,16 +4,10 @@ import { ProjectHeader } from "../../components/projectHeader";
 
 import { ProjectContext } from "../../core/context/project";
 import { Projects } from "../../core/data/projects";
+import { TProjectOmitted } from "../../core/types";
+import { useEffect } from "react";
 
-export const Route = createFileRoute("/project/$project")({
-  component: () => (
-    <Provider>
-      <ProjectHeader />
-    </Provider>
-  ),
-});
-
-const Provider = ({ children }: { children: React.ReactNode }) => {
+const Project = () => {
   const { project } = Route.useParams();
 
   const doesProjectExist = Projects.filter((x) => {
@@ -27,9 +21,29 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
     );
   })[0];
 
+  useEffect(() => {
+    document.title = `${doesProjectExist.projectName} | Dhruv Rayat`;
+  }, [doesProjectExist.projectName]);
+
   return (
-    <ProjectContext.Provider value={doesProjectExist}>
-      {children}
-    </ProjectContext.Provider>
+    <Provider data={doesProjectExist}>
+      <ProjectHeader />
+    </Provider>
   );
 };
+
+const Provider = ({
+  children,
+  data,
+}: {
+  children: React.ReactNode;
+  data: TProjectOmitted;
+}) => {
+  return (
+    <ProjectContext.Provider value={data}>{children}</ProjectContext.Provider>
+  );
+};
+
+export const Route = createFileRoute("/project/$project")({
+  component: Project,
+});

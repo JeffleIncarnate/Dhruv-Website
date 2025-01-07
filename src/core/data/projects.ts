@@ -1,7 +1,7 @@
 import { ByteClass, DhruvBanking, DhruvSocial } from "../../assets";
-import { ProjectOmitted } from "../types";
+import { TProjectOmitted } from "../types";
 
-export const Projects: ProjectOmitted[] = [
+export const Projects: TProjectOmitted[] = [
   {
     projectName: "Dhruv Banking",
     description:
