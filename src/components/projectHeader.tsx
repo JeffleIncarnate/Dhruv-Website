@@ -11,5 +11,21 @@ export const ProjectHeader = () => {
 
   console.log(project);
 
-  return <div></div>;
+  return (
+    <div>
+      <div>
+        <h1>{project.projectName}</h1>
+        <p>{}</p>
+
+        {/* Breadcrumbs */}
+        <div>
+          <p>Home/Project/</p>
+        </div>
+      </div>
+
+      <div>
+        <img src={project.imageData.img} alt={project.imageData.alt} />
+      </div>
+    </div>
+  );
 };
