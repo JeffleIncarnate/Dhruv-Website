@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Logo } from "../assets";
-import { useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [navOpen]);
+
   const navigate = useNavigate();
 
   return (
@@ -96,11 +105,42 @@ export const Navbar = () => {
               },
             }}
           >
-            <div className="ml-8 space-y-8 font-header text-6xl font-bold">
-              <p>Home</p>
-              <p>About</p>
-              <p>Selected Works</p>
-              <p>Contact</p>
+            <div className="ml-8 flex flex-col space-y-8 font-header text-6xl font-bold">
+              <Link
+                to="/"
+                onClick={() => {
+                  setNavOpen(false);
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                to="/"
+                hash="about"
+                onClick={() => {
+                  setNavOpen(false);
+                }}
+              >
+                About
+              </Link>
+              <Link
+                to="/"
+                hash="selected-works"
+                onClick={() => {
+                  setNavOpen(false);
+                }}
+              >
+                Selected Works
+              </Link>
+              <Link
+                to="/"
+                hash="contact"
+                onClick={() => {
+                  setNavOpen(false);
+                }}
+              >
+                Contact
+              </Link>
             </div>
           </motion.div>
         </motion.div>

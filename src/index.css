@@ -11,6 +11,11 @@
   --purple: #705c6b;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--black);
 

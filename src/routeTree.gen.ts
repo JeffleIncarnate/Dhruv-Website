@@ -12,8 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
-import { Route as ProjectIndexImport } from './routes/project/index'
-import { Route as ProjectProjectImport } from './routes/project/$project'
+import { Route as ContactIndexImport } from './routes/contact/index'
 
 // Create/Update Routes
 
@@ -22,13 +21,8 @@ const IndexRoute = IndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const ProjectIndexRoute = ProjectIndexImport.update({
-  path: '/project/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const ProjectProjectRoute = ProjectProjectImport.update({
-  path: '/project/$project',
+const ContactIndexRoute = ContactIndexImport.update({
+  path: '/contact/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -43,18 +37,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/project/$project': {
-      id: '/project/$project'
-      path: '/project/$project'
-      fullPath: '/project/$project'
-      preLoaderRoute: typeof ProjectProjectImport
-      parentRoute: typeof rootRoute
-    }
-    '/project/': {
-      id: '/project/'
-      path: '/project'
-      fullPath: '/project'
-      preLoaderRoute: typeof ProjectIndexImport
+    '/contact/': {
+      id: '/contact/'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -64,8 +51,7 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
-  ProjectProjectRoute,
-  ProjectIndexRoute,
+  ContactIndexRoute,
 })
 
 /* prettier-ignore-end */
@@ -77,18 +63,14 @@ export const routeTree = rootRoute.addChildren({
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/project/$project",
-        "/project/"
+        "/contact/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/project/$project": {
-      "filePath": "project/$project.tsx"
-    },
-    "/project/": {
-      "filePath": "project/index.tsx"
+    "/contact/": {
+      "filePath": "contact/index.tsx"
     }
   }
 }

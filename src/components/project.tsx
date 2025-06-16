@@ -1,22 +1,17 @@
-import { useNavigate } from "@tanstack/react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  faArrowUpRightFromSquare,
-  IconDefinition,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-import type { Project as TProj } from "../core/types";
+import type { TProject } from "../core/types";
 
 export const Project = ({
-  id,
   projectName,
   description,
   imageData,
   tags,
   links,
   type,
-}: TProj) => {
+}: TProject) => {
   return (
     <div
       className="flex w-full gap-16"
@@ -69,38 +64,7 @@ export const Project = ({
             </a>
           )}
         </div>
-
-        <div className="flex gap-2">
-          <Button id={id} text="Learn More" icon={faArrowUpRightFromSquare} />
-        </div>
       </div>
     </div>
-  );
-};
-
-const Button = ({
-  id,
-  text,
-  icon,
-}: {
-  id: string;
-  text: string;
-  icon: IconDefinition;
-}) => {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <button
-        className="flex items-center justify-center gap-2"
-        onClick={() => {
-          navigate({
-            to: `/project/${id}`,
-          });
-        }}
-      >
-        {text} <FontAwesomeIcon icon={icon} />
-      </button>
-    </>
   );
 };
